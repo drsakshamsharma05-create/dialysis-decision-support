@@ -1,0 +1,8 @@
+{
+  "name": "AI-Assisted Dialysis Decision Support",
+  "short_name": "Dialysis-CDSS",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0d47a1"
+}
