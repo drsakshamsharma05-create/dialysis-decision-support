@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI-Assisted Dialysis Decision Support</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0d47a1">
+</head>
+
+<body>
+
+<h2>AI-Assisted Dialysis Decision Support System</h2>
+
+<!-- LOGIN -->
+<button id="moBtn">Dialysis Medical Officer</button>
+<button id="staffBtn">Dialysis Staff</button>
+<p id="roleText"></p>
+
+<hr>
+
+<div id="app" style="display:none;">
+
+  <!-- ================= PATIENT REGISTRATION ================= -->
+  <h3>Patient Registration</h3>
+  <input id="patientAge" placeholder="Age (years)">
+  <select id="dialysisType">
+    <option value="">Select Dialysis Type</option>
+    <option value="HD">Hemodialysis</option>
+  </select>
+  <button id="registerPatientBtn">Register Patient</button>
+  <p id="generatedPatientId"></p>
+
+  <hr>
+
+  <!-- ================= PATIENT SELECTION ================= -->
+  <h3>Select Registered Patient</h3>
+  <select id="patientSelect">
+    <option value="">Select Patient ID</option>
+  </select>
+  <p id="activePatientText">No patient selected</p>
+
+  <hr>
+
+  <!-- ================= LAB REVIEW ================= -->
+  <h3>Laboratory Review</h3>
+  <input id="hb" placeholder="Hemoglobin (g/dL)">
+  <input id="k" placeholder="Potassium (mmol/L)">
+  <input id="na" placeholder="Sodium (mmol/L)">
+  <button id="labBtn">Review Labs</button>
+
+  <hr>
+
+  <!-- ================= ULTRAFILTRATION ================= -->
+  <h3>Ultrafiltration Review</h3>
+  <input id="lastPostWt" placeholder="Last post-dialysis weight (kg)">
+  <input id="currentPreWt" placeholder="Current pre-dialysis weight (kg)">
+  <input id="intraFluid" placeholder="Intradialytic fluid intake (L)">
+  <button id="ufBtn">Suggest Target UF</button>
+  <p id="ufText"></p>
+
+</div>
+
+<script src="script.js"></script>
+
+<!-- SERVICE WORKER -->
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+</body>
+</html>
