@@ -43,28 +43,25 @@
 
   <hr>
 
-  <!-- ================= LAB REVIEW ================= -->
-  <h3>Laboratory Review</h3>
+  <!-- ================= SESSION DATA ENTRY ================= -->
+  <h3>Dialysis Session Entry</h3>
+
   <input id="hb" placeholder="Hemoglobin (g/dL)">
   <input id="k" placeholder="Potassium (mmol/L)">
   <input id="na" placeholder="Sodium (mmol/L)">
-  <button id="labBtn">Review Labs</button>
 
-  <hr>
-
-  <!-- ================= ULTRAFILTRATION ================= -->
-  <h3>Ultrafiltration Review</h3>
   <input id="lastPostWt" placeholder="Last post-dialysis weight (kg)">
   <input id="currentPreWt" placeholder="Current pre-dialysis weight (kg)">
   <input id="intraFluid" placeholder="Intradialytic fluid intake (L)">
-  <button id="ufBtn">Suggest Target UF</button>
-  <p id="ufText"></p>
+
+  <button id="saveSessionBtn">Save Session & Review</button>
+
+  <p id="sessionOutput"></p>
 
 </div>
 
 <script src="script.js"></script>
 
-<!-- SERVICE WORKER -->
 <script>
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("service-worker.js");
